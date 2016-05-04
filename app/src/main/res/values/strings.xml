@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Senior Tech Help</string>
+    <string name="title_details">Details</string>
+
+    <string name="google" translatable="false">Google</string>
+    <string name="playstore" translatable="false">Play Store</string>
+    <string name="facebook" translatable="false">Facebook</string>
+    <string name="hangout" translatable="false">Hangout</string>
+    <string name="maps" translatable="false">Map</string>
+    <string name="twitter" translatable="false">Twitter</string>
+
+    <string name="google_heading">Add one or multiple Google Accounts</string>
+    <string name="google_steps">\n1.\tOpen your device\'s Settings app.
+        \n1.\tUnder "Accounts," touch Add account > Google Google.
+        \n2.\tFollow the instructions to add your account.
+        \n3.\tIf needed, repeat steps to add multiple accounts. </string>
+
+    <string name="playstore_heading">Install or purchase app in Play Store</string>
+    <string name="playstore_steps">\nInstall or purchase.
+       \n1.\tIf you haven\'t already, add a Google account on your device.
+        \n2.\tGo to Google Play or open the Google Play Store app Google Play.
+        \n3.\tSelect an item.
+        \n4.\tTouch Install (for free items) or the item\'s price.
+        \n5.\tFollow the on-screen instructions. For paid items, you can select or edit your payment method with the down arrow Down. If it\'s your first time making a purchase, your payment method will be added to your Google account.
+    </string>
+
+    <string name="facebook_heading">How do I upload photos in Facebook?</string>
+    <string name="facebook_steps">\nTo add and post photos to Facebook.\n
+        \n1.\tTap Photo at the top of your News Feed.
+        \n2.\tChoose photos from your android phone camera roll.
+        \n3.\tTap Done.
+        \n4.\tIf you want, you can:
+        \n\t\t1.\tTag friends
+        \n\t\t2.\tShare what you are feeling or doing
+        \n\t\t3.\tAdd a location
+        \n\t\t4.\tChoose an album
+        \n\t\t5.\tTap the photo to edit
+        \n5.\tTap Post</string>
+
+    <string name="hangout_heading">Get Started with your Hangout app</string>
+    <string name="hangout_steps">\nGet Started with your Hangout app:\n
+        \nOn your Android device, open the Hangouts app.
+        \n1.\t At the bottom right, tap Compose.
+        \n2.\t Tap New Conversation.
+        \n3.\t Type the person name, and select them from the search results.
+        \n4.\t Type your message, and tap Send.
+        \n\nFor Video Call:
+        \nOn your Android device, open the Hangouts app.
+        \n1.\tAt the bottom right, tap Compose.
+        \n2.\tTap New Video Call.
+        \n3.\tFor each person in your video call, type their name and select them from the search results.
+        \n4.\tTap Video call.
+        \n5.\tWhen you are done with your video call, you can leave by tapping End call Call end icon.</string>
+
+    <string name="maps_heading">Open the Google Maps app maps</string>
+    <string name="maps_steps">\nOpen the Google Maps app maps.\n
+        \n1.\tSearch for your destination or tap it on the map.
+        \n2.\tIn the bottom right, tap the blue circle. It will show a car, bus, bike, taxi, or person walking.
+        \n3.\tChoose one of the following:
+            \n\t\t1.\tDriving:
+            \n\t\t2.\tTransit:
+            \n\t\t3.\tWalking:
+            \n\t\t4.\tRides:
+            \n\t\t5.\tCycling:
+        \n4.\tTo see the list of driving, walking, or biking directions, tap the white bar at the bottom. It is the one that shows the travel time and distance.</string>
+
+    <string name="twitter_heading">How to post and delete a Tweet:</string>
+    <string name="twitter_steps">\nTo post a Tweet:\n
+        \n1.\tTap on the Tweet compose icon.
+        \n2.\tEnter your message, and then tap Tweet.
+        \n3.\tA notification will appear in the status bar on your device and will go away once the Tweet successfully sends.
+
+        \n\nTo @reply or mention an account:\n
+        \n1.\tFrom your keyboard, tap the @ symbol and start typing. A drop down list of accounts you follow will appear.
+        \n2.\tAs you type, the list will narrow down possible matches.
+        \n3.\tWhen the username you are looking for appears, tap it and it will be populated in the Tweet composer.
+
+        \n\nTo delete a Tweet:\n
+        \n1.\tTap the Tweet you would like to delete, and then tap on the trash can icon
+        \n2.\tA message will pop-up with the option to cancel. Tap Delete Tweet.
+        \n3.\tA message will pop up with the option to proceed or cancel. Tap Yes to delete. The Tweet will be successfully removed from your profile.
+</string>
+
+
+</resources>
