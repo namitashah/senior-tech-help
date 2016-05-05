@@ -1,13 +1,11 @@
 package com.example.android.help;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.util.TypedValue;
-import android.view.Display;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -17,13 +15,27 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-import static com.example.android.help.common.Constants.*;
+import com.example.android.help.common.Utils;
+
+import static com.example.android.help.common.Constants.BUNDLE_KEY_LINK_CLICK_TYPE;
+import static com.example.android.help.common.Constants.FACEBOOK_INDEX;
+import static com.example.android.help.common.Constants.FACEBOOK_VIDEO_URL;
+import static com.example.android.help.common.Constants.GOOGLE_INDEX;
+import static com.example.android.help.common.Constants.GOOGLE_VIDEO_URL;
+import static com.example.android.help.common.Constants.HANGOUT_INDEX;
+import static com.example.android.help.common.Constants.HANGOUT_VIDEO_URL;
+import static com.example.android.help.common.Constants.MAPS_INDEX;
+import static com.example.android.help.common.Constants.MAP_VIDEO_URL;
+import static com.example.android.help.common.Constants.PLAYSTORE_INDEX;
+import static com.example.android.help.common.Constants.PLAYSTORE_VIDEO_URL;
+import static com.example.android.help.common.Constants.TWITTER_INDEX;
+import static com.example.android.help.common.Constants.TWITTER_VIDEO_URL;
 
 /**
  * DetailsActivity opens when any icon is clicked.
  * It contains video, and other details for how to use that particular social media.
  */
-public class DetailsActivity extends AppCompatActivity {
+public class DetailsActivity extends BaseActivity {
 
     // Video view to show video
     VideoView videoView;
@@ -47,16 +59,21 @@ public class DetailsActivity extends AppCompatActivity {
         rlVideoView = (RelativeLayout) findViewById(R.id.rlVideo);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-        //Showing logo on Action Bar.
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setHomeButtonEnabled(true);
-            getSupportActionBar().setDisplayShowHomeEnabled(true);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
+        // Set action bar
+        setActionBarDetails(true);
 
         //Checking which icon was clicked from MainActivity, using the parameter which was passed in the intent.
-        if (getIntent() != null && getIntent().hasExtra("key")) {
-            int type = getIntent().getIntExtra("key", -1);
+        setViewDetails(getIntent());
+    }
+
+    /**
+     * Sets details of the view.
+     *
+     * @param intent Intent with which Activity was created.
+     */
+    private void setViewDetails(Intent intent) {
+        if (intent != null && intent.hasExtra(BUNDLE_KEY_LINK_CLICK_TYPE)) {
+            int type = intent.getIntExtra(BUNDLE_KEY_LINK_CLICK_TYPE, -1);
             String tabHeading = "";
             String steps = "";
 
@@ -101,7 +118,7 @@ public class DetailsActivity extends AppCompatActivity {
     /**
      * This will display videos for each selected icon.
      *
-     * @param view
+     * @param view View
      */
     public void startShowingVideo(View view) {
         // Hide initial views which are not needed right now.
@@ -109,25 +126,9 @@ public class DetailsActivity extends AppCompatActivity {
         // Show the layout containing the video view.
         rlVideoView.setVisibility(View.VISIBLE);
         videoView.setVisibility(View.VISIBLE);
-        // Get display size
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        int width = size.x;
-        int height = size.y;
 
-        // Calculate ActionBar height
-        TypedValue tv = new TypedValue();
-        int actionBarHeight = 0;
-        if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
-            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
-        }
-
-        //setting size for videoView.
-        RelativeLayout.LayoutParams param = (RelativeLayout.LayoutParams) videoView.getLayoutParams();
-        param.height = height - 3 * actionBarHeight;
-        param.width = width;
-        videoView.setLayoutParams(param);
+        // Sets the size of the view based on actionbar and device size.
+        setVideoViewSize();
 
         // Initialize media controller.
         MediaController mediaController = new MediaController(this);
@@ -154,6 +155,26 @@ public class DetailsActivity extends AppCompatActivity {
                 hideProgressBar();
             }
         });
+
+    }
+
+    /**
+     * Sets the size of the video view.
+     */
+    private void setVideoViewSize() {
+        // Get dimensions
+        Point size = Utils.getDisplayDimensions(this);
+        int width = size.x;
+        int height = size.y;
+
+        // Calculate ActionBar height
+        int actionBarHeight = Utils.getActionBarHeight(this);
+
+        //setting size for videoView.
+        RelativeLayout.LayoutParams param = (RelativeLayout.LayoutParams) videoView.getLayoutParams();
+        param.height = height - 3 * actionBarHeight;
+        param.width = width;
+        videoView.setLayoutParams(param);
 
     }
 

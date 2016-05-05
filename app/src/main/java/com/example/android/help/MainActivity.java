@@ -1,13 +1,22 @@
 package com.example.android.help;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import static com.example.android.help.common.Constants.*;
+import static com.example.android.help.common.Constants.BUNDLE_KEY_LINK_CLICK_TYPE;
+import static com.example.android.help.common.Constants.FACEBOOK_INDEX;
+import static com.example.android.help.common.Constants.GOOGLE_INDEX;
+import static com.example.android.help.common.Constants.HANGOUT_INDEX;
+import static com.example.android.help.common.Constants.MAPS_INDEX;
+import static com.example.android.help.common.Constants.PLAYSTORE_INDEX;
+import static com.example.android.help.common.Constants.TWITTER_INDEX;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Shoes the main activity with options to choose various social networks
+ * for which users need to know.
+ */
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,12 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Showing logo on Action Bar.
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setHomeButtonEnabled(true);
-            getSupportActionBar().setDisplayShowHomeEnabled(true);
-            getSupportActionBar().setDisplayUseLogoEnabled(true);
-            getSupportActionBar().setIcon(R.mipmap.ic_launcher);
-        }
+        setActionBarDetails(false);
     }
 
     /**
@@ -84,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void startNewActivity(int index) {
         Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
-        intent.putExtra("key", index);
+        intent.putExtra(BUNDLE_KEY_LINK_CLICK_TYPE, index);
         startActivity(intent);
     }
 
