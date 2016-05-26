@@ -18,7 +18,9 @@ I understand that just the videos and text might not be enough for the elderly e
 However in future I want to take the app to a next level and want to add voice instructions which guides them step by step. 
 The app will incorporate options mechanism for feedback.
 
-<b>Snapshots: (version 1.0)</b> 
+<b>Snapshots: (version 1.0)</b>
+<br><i>P.S:All the icons used in project are trademark and copyright of the owner companies.</i>
+
 
 <a href="url"><img src="snapshots/1_Home_Screen.png" align="left" height="533" width="300" ></a>
 <a href="url"><img src="snapshots/2_Google_Maps_Details.png" align="left" height="533" width="300" ></a>
@@ -26,3 +28,4 @@ The app will incorporate options mechanism for feedback.
 <a href="url"><img src="snapshots/4_Twitter_Detail.png" align="left" height="533" width="300" ></a>
 <a href="url"><img src="snapshots/5_Twitter_Detail.png" align="left" height="533" width="300" ></a>
 <a href="url"><img src="snapshots/7_PlayStore_Detail.png" align="left" height="533" width="300" ></a>
+
