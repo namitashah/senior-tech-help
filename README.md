@@ -1,4 +1,4 @@
-# senior-tech-help
+# senior-tech-help 
 
 <b>Idea:</b>
 An app that helps seniors with learning to use other famous mobile apps.
@@ -17,3 +17,12 @@ I kept steps for multiple apps together at one place so that the users don’t h
 I understand that just the videos and text might not be enough for the elderly end user. 
 However in future I want to take the app to a next level and want to add voice instructions which guides them step by step. 
 The app will incorporate options mechanism for feedback.
+
+<b>Snapshots: (version 1.0)</b> 
+
+<a href="url"><img src="snapshots/1_Home_Screen.png" align="left" height="533" width="300" ></a>
+<a href="url"><img src="snapshots/2_Google_Maps_Details.png" align="left" height="533" width="300" ></a>
+<a href="url"><img src="snapshots/3_Google_Maps_Details.png" align="left" height="533" width="300" ></a>
+<a href="url"><img src="snapshots/4_Twitter_Detail.png" align="left" height="533" width="300" ></a>
+<a href="url"><img src="snapshots/5_Twitter_Detail.png" align="left" height="533" width="300" ></a>
+<a href="url"><img src="snapshots/7_PlayStore_Detail.png" align="left" height="533" width="300" ></a>
